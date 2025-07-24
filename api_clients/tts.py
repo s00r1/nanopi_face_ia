@@ -17,8 +17,8 @@ class TTSClient:
         }
         response = requests.post(self.endpoint, json=data, headers=headers)
         if response.status_code == 200:
-            out_path = f\"/tmp/tts_{uuid.uuid4().hex}.wav\"
-            with open(out_path, \"wb\") as f:
+            out_path = f"/tmp/tts_{uuid.uuid4().hex}.wav"
+            with open(out_path, "wb") as f:
                 f.write(response.content)
             return out_path
         return None

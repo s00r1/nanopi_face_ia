@@ -86,8 +86,12 @@ class AudioManager:
         return self.record_audio(tmp_path, duration)
 
     def play(self, file_path):
-        """Lecture d'un fichier audio via l'appareil de sortie."""
+        """Lecture d'un fichier audio puis suppression du fichier."""
         self.play_audio(file_path)
+        try:
+            os.remove(file_path)
+        except OSError:
+            print(f"Erreur: impossible de supprimer {file_path}")
 
     def scan_audio_devices(self):
         return {
