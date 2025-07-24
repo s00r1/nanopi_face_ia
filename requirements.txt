@@ -1,0 +1,1 @@
+Flask==3.1.1python-dotenv==1.1.1sounddevice==0.5.2soundfile==0.13.1groq==0.30.0SpeechRecognition==3.14.3requests==2.32.4psutil==7.0.0
