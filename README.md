@@ -35,10 +35,8 @@ pip3 install PyQt5 sounddevice numpy pyalsaaudio requests
 
 ## 🚀 Lancement de l'application
 
-Assurez-vous de disposer d'un répertoire `faces/` contenant au moins un dossier
-par humeur (ex. `muet`, `joie`, `colere`, etc.) avec des fichiers `.gif`.
-Le fichier `config.json` est créé automatiquement au premier démarrage.
-
+Assurez-vous de disposer d'un répertoire `faces/` contenant au moins un dossier par humeur (ex. `muet`, `joie`, `colere`, etc.) avec des fichiers `.gif`.
+Copiez d'abord `config.example.json` vers `config.json` puis remplissez les clefs et URLs correspondant à vos services. Sans ce fichier, un `config.json` vide sera créé au premier démarrage.
 ```bash
 python3 main.py
 ```

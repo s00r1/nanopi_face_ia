@@ -1,0 +1,13 @@
+{
+  "stt_api_key": "VOTRE_CLE",
+  "stt_api_url": "https://exemple.com/stt",
+  "tts_api_key": "VOTRE_CLE",
+  "tts_api_url": "https://exemple.com/tts",
+  "chat_api_key": "VOTRE_CLE",
+  "chat_api_url": "https://exemple.com/chat",
+  "mood_api_key": "VOTRE_CLE",
+  "mood_api_url": "https://exemple.com/mood",
+  "tts_model": "v1",
+  "chat_model": "v1",
+  "mood_model": "v1"
+}
