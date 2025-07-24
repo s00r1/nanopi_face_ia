@@ -84,3 +84,18 @@ faces/
 
 Vous pouvez modifier ces valeurs via le panneau de paramètres accessible depuis
 l'interface principale.
+
+## \U0001F5A5\uFE0F Utilisation sur NanoPi Neo + \u00e9cran SPI 2.8"
+
+Un script de lancement est fourni pour utiliser directement le framebuffer de l'\u00e9cran SPI.
+
+```bash
+chmod +x scripts/run_spi_screen.sh
+./scripts/run_spi_screen.sh
+```
+
+Par d\u00e9faut, il utilise `/dev/fb1`. Pour un autre framebuffer :
+
+```bash
+QT_QPA_FB=/dev/fb0 ./scripts/run_spi_screen.sh
+```
