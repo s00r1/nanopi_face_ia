@@ -5,6 +5,7 @@ import numpy as np
 import wave
 import os
 import alsaaudio
+import uuid
 
 class AudioManager:
     def __init__(self, config):
@@ -78,6 +79,15 @@ class AudioManager:
                     sd.sleep(int(wf.getnframes() / wf.getframerate() * 1000))
         except Exception as e:
             print("Erreur lecture audio:", e)
+
+    def listen(self, duration=None):
+        """Enregistre un fichier audio temporaire et renvoie son chemin."""
+        tmp_path = f"/tmp/listen_{uuid.uuid4().hex}.wav"
+        return self.record_audio(tmp_path, duration)
+
+    def play(self, file_path):
+        """Lecture d'un fichier audio via l'appareil de sortie."""
+        self.play_audio(file_path)
 
     def scan_audio_devices(self):
         return {
